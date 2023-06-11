@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 
 # [project]
 # name = "my_package"
+# version = "0.0.1" (can be excluded when using dynamic version)
 # authors = [
 #     {name = "Josiah Carberry", email = "josiah_carberry@brown.edu"},
 # ]
@@ -14,6 +15,7 @@ build-backend = "setuptools.build_meta"
 # requires-python = ">=3.7"
 # keywords = ["one", "two"]
 # license = {text = "BSD-3-Clause"}
+# license = { file = "LICENSE" }
 # classifiers = [
 #     "Framework :: Django",
 #     "Programming Language :: Python :: 3",
@@ -23,6 +25,9 @@ build-backend = "setuptools.build_meta"
 #     'importlib-metadata; python_version<"3.8"',
 # ]
 # dynamic = ["version"]
+
+# [tool.setuptools.dynamic]
+# version = {attr = "py_pkg_test.__version__"}
 
 # [project.optional-dependencies]
 # pdf = ["ReportLab>=1.2", "RXP"]
